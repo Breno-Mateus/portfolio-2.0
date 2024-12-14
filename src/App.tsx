@@ -1,9 +1,10 @@
+import Projects from "./components/sections";
 
 
 const App = () => {
   return (
     <div>
-      Olá mundo!
+      <Projects />
     </div>
   )
 };
