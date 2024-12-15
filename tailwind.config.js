@@ -11,6 +11,7 @@ export default {
         colorSecondary: '#323946',
         colorStyle: '#6C63FF',
         colorWhite: '#fff',
+        colorstyleSecondary: '#1b2669',
       }
     },
   },

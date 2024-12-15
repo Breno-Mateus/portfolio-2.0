@@ -5,8 +5,6 @@ const Projects = () => {
 
     const data = useGitHubAutomatedRepos("Breno-Mateus", "keyword");
 
-    console.log(data[1]);
-
     return (
         <section className="bg-colorSecondary flex flex-col items-center py-16 gap-20">
             <h1 className="text-4xl font-bold uppercase">Meus <span className="text-colorStyle">Projetos</span></h1>
