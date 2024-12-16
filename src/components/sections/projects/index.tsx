@@ -1,4 +1,4 @@
-import CardProject from "../card-project";
+import CardProject from "../../card-project";
 import {useGitHubAutomatedRepos} from "github-automated-repos";
 
 const Projects = () => {
