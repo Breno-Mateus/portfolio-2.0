@@ -9,7 +9,7 @@ const Header = () => {
         <header className="bg-colorPrimary flex items-center justify-between fixed top-0 w-screen px-[5%] py-4">
             <img src={Breno} className="w-8 h-8 rounded-full border-[1px] border-colorStyle"/>
             
-            <ul className="flex items-center gap-8 uppercase">
+            <ul className="flex items-center gap-8 uppercase text-sm">
                 <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Home</li>
                 <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Sobre</li>
                 <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Habilidades</li>
