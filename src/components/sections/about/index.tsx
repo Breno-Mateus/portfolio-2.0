@@ -2,7 +2,7 @@ import Breno from "../../../assets/foto_breno.jpeg";
 
 const About = () => {
     return (
-        <section className="bg-colorSecondary flex flex-col items-center py-16 px-[10%] gap-20 min-h-screen justify-around">
+        <section className="bg-colorSecondary flex flex-col items-center py-16 px-[10%] min-h-screen justify-around">
             <h1 className="text-4xl font-bold uppercase">Sobre <span className="text-colorStyle">Mim</span></h1>
             <div className="flex flex-col items-center justify-between gap-12">
                 <img src={Breno} alt="" className="w-[15%] rounded-full border-[1px] border-colorStyle"/>
