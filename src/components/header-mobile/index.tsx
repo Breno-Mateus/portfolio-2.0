@@ -48,9 +48,9 @@ const HeaderMobile = () => {
                 </ul>
 
                 <div className="flex gap-4 items-center justify-center text-[1.5rem]">
-                    <FaLinkedin />
-                    <FaGithubSquare />
-                    <FaInstagram />
+                    <a href="https://www.linkedin.com/in/breno-mateus/"><FaLinkedin /></a>
+                    <a href="https://github.com/Breno-Mateus"><FaGithubSquare /></a>
+                    <a href="https://www.instagram.com/brenomateusds/"><FaInstagram /></a>
                 </div>
             </div>
         </div>

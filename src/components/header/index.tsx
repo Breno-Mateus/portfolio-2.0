@@ -16,9 +16,9 @@ const Header = () => {
             </ul>
 
             <div className="flex gap-4 text-xl">
-                <FaLinkedin />
-                <FaGithubSquare />
-                <FaInstagram />
+                <a href="https://www.linkedin.com/in/breno-mateus/"><FaLinkedin /></a>
+                <a href="https://github.com/Breno-Mateus"><FaGithubSquare /></a>
+                <a href="https://www.instagram.com/brenomateusds/"><FaInstagram /></a>
             </div>
         </header>
     )
