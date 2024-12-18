@@ -2,10 +2,15 @@ import { Pivot as Hamburger } from 'hamburger-react';
 import Breno from "../../assets/foto_breno.jpeg";
 import { useEffect, useState } from 'react';
 import { FaLinkedin, FaGithubSquare, FaInstagram } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const HeaderMobile = () => {
 
     const [isOpen, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(false);
+    };
 
     useEffect(() => {
         if (isOpen) {
@@ -35,11 +40,11 @@ const HeaderMobile = () => {
                 </div>
 
                 <ul className="flex flex-col items-center gap-8 uppercase text-sm">
-                    <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Home</li>
-                    <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Sobre</li>
-                    <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Habilidades</li>
-                    <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Projetos</li>
-                    <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Contato</li>
+                    <Link to="home" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Home</Link>
+                    <Link to="about" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Sobre</Link>
+                    <Link to="skills" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Habilidades</Link>
+                    <Link to="projects" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Projetos</Link>
+                    <Link to="contact" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Contato</Link>
                 </ul>
 
                 <div className="flex gap-4 items-center justify-center text-[1.5rem]">

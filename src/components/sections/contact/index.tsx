@@ -1,6 +1,6 @@
 const Contact = () => {
     return (
-        <section className="bg-colorPrimary py-16 px-2 flex flex-col gap-16 items-center">
+        <section id="contact" className="bg-colorPrimary py-16 px-2 flex flex-col gap-16 items-center">
             <h1 className="text-3xl font-bold uppercase text-center">Entre em <span className="text-colorStyle">Contato</span></h1>
 
             <form className="flex flex-col gap-4 items-center md:w-[50%]">
