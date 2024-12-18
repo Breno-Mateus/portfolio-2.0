@@ -19,7 +19,7 @@ import post from "../../../assets/Skills_Image/postman.png";
 const Skills = () => {
     return (
         <section className="bg-colorPrimary flex flex-col items-center py-16 px-[10%] gap-20">
-            <h1 className="text-4xl font-bold uppercase">Minhas <span className="text-colorStyle">Habilidades</span></h1>
+            <h1 className="text-center text-3xl md:text-4xl font-bold uppercase">Minhas <span className="text-colorStyle">Habilidades</span></h1>
             <div className="flex flex-wrap items-center justify-center gap-12">
                 <BoxSkills urlImage={React} name="React"/>
                 <BoxSkills urlImage={Html} name="HTML"/>
