@@ -1,3 +1,5 @@
+import Inputs from "../../inputs";
+
 const Contact = () => {
     return (
         <section id="contact" className="bg-colorPrimary py-16 px-2 flex flex-col gap-16 items-center">
@@ -5,27 +7,13 @@ const Contact = () => {
 
             <form className="flex flex-col gap-4 items-center md:w-[50%]">
                 <div className="flex gap-2 font-light">
-                    <div className="w-[50%]">
-                        <label htmlFor="name">Nome Completo</label>
-                        <input type="text" id="name" className="bg-colorSecondary w-full rounded-md p-2 focus:outline-none focus:bg-colorSecondary"/>
-                    </div>
-
-                    <div className="w-[50%]">
-                        <label htmlFor="email">Endereço de E-mail</label>
-                        <input type="text" id="email" className="bg-colorSecondary w-full rounded-md p-2 focus:outline-none focus:bg-colorSecondary"/>
-                    </div>
+                    <Inputs htmlForId="name" type="text" label="Nome Completo"/>
+                    <Inputs htmlForId="email" type="email" label="Endereço de E-mail"/>
                 </div>
 
                 <div className="flex gap-2 font-light">
-                    <div className="w-[50%]">
-                        <label htmlFor="phone">Telefone</label>
-                        <input type="text" id="phone" className="bg-colorSecondary w-full rounded-md p-2 focus:outline-none focus:bg-colorSecondary"/>
-                    </div>
-
-                    <div className="w-[50%]">
-                        <label htmlFor="subject">Assunto do E-mail</label>
-                        <input type="text" id="subject" className="bg-colorSecondary w-full rounded-md p-2 focus:outline-none focus:bg-colorSecondary"/>
-                    </div>
+                    <Inputs htmlForId="phone" type="number" label="Telefone"/>
+                    <Inputs htmlForId="subject" type="text" label="Assunto do E-mail"/>
                 </div>
 
                 <div className="flex flex-col w-full font-light">
