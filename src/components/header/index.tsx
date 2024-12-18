@@ -12,6 +12,7 @@ const Header = () => {
                 <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Sobre</li>
                 <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Habilidades</li>
                 <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Projetos</li>
+                <li className="hover:text-colorStyle hover:cursor-pointer hover:underline">Contato</li>
             </ul>
 
             <div className="flex gap-4 text-xl">

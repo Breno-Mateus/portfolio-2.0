@@ -5,6 +5,7 @@ import Home from "./components/sections/home";
 import About from "./components/sections/about";
 import HeaderMobile from "./components/header-mobile";
 import Footer from "./components/footer";
+import Contact from "./components/sections/contact";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <About />
       <Skills />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   )
