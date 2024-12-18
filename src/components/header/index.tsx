@@ -1,8 +1,6 @@
 import Breno from "../../assets/foto_breno.jpeg";
 
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare, FaInstagram } from "react-icons/fa";
 
 const Header = () => {
     return (

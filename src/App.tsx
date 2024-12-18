@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Home from "./components/sections/home";
 import About from "./components/sections/about";
 import HeaderMobile from "./components/header-mobile";
+import Footer from "./components/footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <About />
       <Skills />
       <Projects />
+      <Footer />
     </div>
   )
 };
