@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, ContactFormData } from "../../../schema/contact-form"; 
 import emailjs from '@emailjs/browser';
+import FeedbackMessage from "../../feedback-message";
+import { useState } from "react";
 
 const Contact = () => {
 
@@ -9,9 +11,13 @@ const Contact = () => {
         resolver: zodResolver(contactFormSchema),
     });
 
-    const handleSubmitForm = async (data: ContactFormData) => {
+    const [ isMessage, setIsMessage ] = useState(false);
+
+    const [ isValid, setIsValid ] = useState<boolean>();
+
+    const handleSubmitForm = (data: ContactFormData) => {
         try {
-            const result = await emailjs.send(
+            emailjs.send(
               "service_e2p6k0e",
               "template_bo2p4pa",
               {
@@ -23,10 +29,18 @@ const Contact = () => {
               },
               "CqmKdfY4OtgySJ5V5",
             );
-        
-            console.log("Email enviado com sucesso:", result.text);
-          } catch (error) {
-            console.error("Erro ao enviar email:", error);
+
+            setIsMessage(true);
+            setIsValid(true);
+
+            setTimeout(() => {
+                setIsMessage(false);
+                window.location.reload();
+            }, 5000);
+
+          } catch {
+            setIsMessage(true);
+            setIsValid(false);
           }
     };
 
@@ -71,6 +85,11 @@ const Contact = () => {
 
                 <button className="bg-colorStyle w-[30%] p-2 rounded-md font-light hover:opacity-80 hover:cursor-pointer" type="submit">Enviar</button>
             </form>
+
+            {isMessage === true &&  isValid === true && (<FeedbackMessage message="Mensagem enviada com sucesso!" valid={true}/>)}
+
+            {isMessage === true &&  isValid === false && (<FeedbackMessage message="Erro ao enviar a mensagem!" valid={false}/>)}
+            
         </section>
     )
 };
