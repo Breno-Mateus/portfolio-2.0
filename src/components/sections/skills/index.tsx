@@ -26,7 +26,7 @@ const Skills = () => {
         <section id="skills" className="bg-colorPrimary flex flex-col items-center py-16 px-[10%] gap-20">
             <h1 className="text-center text-3xl md:text-4xl font-bold uppercase">Minhas <span className="text-colorStyle">Habilidades</span></h1>
             
-            <div className="flex gap-8">
+            <div className="flex flex-col lg:flex-row gap-8">
                 <BoxSoftSkills Icon={RiTeamFill} title="Trabalho em Equipe" description="Experiência em colaborar com equipes multidisciplinares em projetos de software."/>
                 <BoxSoftSkills Icon={RiSpeakFill} title="Comunicação" description="Capacidade de transmitir ideias de forma clara, seja em equipe ou com clientes."/>
                 <BoxSoftSkills Icon={GrUserWorker} title="Resolução de Problemas" description="Capacidade de identificar e solucionar desafios técnicos e lógicos rapidamente."/>
