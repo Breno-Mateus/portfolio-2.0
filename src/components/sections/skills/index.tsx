@@ -1,4 +1,5 @@
 import BoxSkills from "../../box-skills";
+import BoxSoftSkills from "../../box-soft-skills";
 //images skills
 import Html from "../../../assets/Skills_Image/html-5.png";
 import Css from "../../../assets/Skills_Image/css-3.png";
@@ -16,10 +17,21 @@ import test from "../../../assets/Skills_Image/Testing-Library.svg";
 import jest from "../../../assets/Skills_Image/jest.svg";
 import post from "../../../assets/Skills_Image/postman.png";
 
+import { RiTeamFill, RiSpeakFill } from "react-icons/ri";
+import { GrUserWorker } from "react-icons/gr";
+
+
 const Skills = () => {
     return (
         <section id="skills" className="bg-colorPrimary flex flex-col items-center py-16 px-[10%] gap-20">
             <h1 className="text-center text-3xl md:text-4xl font-bold uppercase">Minhas <span className="text-colorStyle">Habilidades</span></h1>
+            
+            <div className="flex gap-8">
+                <BoxSoftSkills Icon={RiTeamFill} title="Trabalho em Equipe" description="Experiência em colaborar com equipes multidisciplinares em projetos de software."/>
+                <BoxSoftSkills Icon={RiSpeakFill} title="Comunicação" description="Capacidade de transmitir ideias de forma clara, seja em equipe ou com clientes."/>
+                <BoxSoftSkills Icon={GrUserWorker} title="Resolução de Problemas" description="Capacidade de identificar e solucionar desafios técnicos e lógicos rapidamente."/>
+            </div>
+
             <div className="flex flex-wrap items-center justify-center gap-12">
                 <BoxSkills urlImage={React} name="React"/>
                 <BoxSkills urlImage={Html} name="HTML"/>
