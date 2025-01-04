@@ -40,17 +40,17 @@ const HeaderMobile = () => {
                 </div>
 
                 <ul className="flex flex-col items-center gap-8 uppercase text-sm">
-                    <Link to="home" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Home</Link>
-                    <Link to="about" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Sobre</Link>
-                    <Link to="skills" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Habilidades</Link>
-                    <Link to="projects" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Projetos</Link>
-                    <Link to="contact" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline" onClick={() => handleOpen()}>Contato</Link>
+                    <Link to="home" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500" onClick={() => handleOpen()}>Home</Link>
+                    <Link to="about" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500" onClick={() => handleOpen()}>Sobre</Link>
+                    <Link to="skills" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500" onClick={() => handleOpen()}>Habilidades</Link>
+                    <Link to="projects" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500" onClick={() => handleOpen()}>Projetos</Link>
+                    <Link to="contact" smooth={true} duration={500} className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500" onClick={() => handleOpen()}>Contato</Link>
                 </ul>
 
                 <div className="flex gap-4 items-center justify-center text-[1.5rem]">
-                    <a href="https://www.linkedin.com/in/breno-mateus/"><FaLinkedin /></a>
-                    <a href="https://github.com/Breno-Mateus"><FaGithubSquare /></a>
-                    <a href="https://www.instagram.com/brenomateusds/"><FaInstagram /></a>
+                    <a href="https://www.linkedin.com/in/breno-mateus/"><FaLinkedin className="hover:text-colorStyle transition duration-500"/></a>
+                    <a href="https://github.com/Breno-Mateus"><FaGithubSquare className="hover:text-colorStyle transition duration-500"/></a>
+                    <a href="https://www.instagram.com/brenomateusds/"><FaInstagram className="hover:text-colorStyle transition duration-500"/></a>
                 </div>
             </div>
         </div>
