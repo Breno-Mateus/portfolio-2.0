@@ -6,7 +6,11 @@ const Home = () => {
             <div className="flex flex-col gap-4 md:w-[38%]">
                 <h3 className="leading-none text-[1.5rem] md:text-[2rem] font-extrabold text-colorStyle">&lt; Desenvolvedor Frontend &gt;</h3>
                 <p className="leading-tight text-sm md:text-base font-light">Sou apaixonado por desenvolver interfaces web modernas e escaláveis, criando experiências interativas e funcionais que encantam e atendem às necessidades dos usuários!</p>
-                <button className="bg-colorStyle text-xs md:text-base py-1 px-2 rounded-md hover:opacity-85 font-medium w-[40%] md:w-[80%] lg:w-[40%]">Download CV</button>
+                <a  href="/Currículo.pdf" 
+                    className="bg-colorStyle text-xs text-center md:text-base py-1 px-2 rounded-md hover:opacity-85 font-medium w-[40%] md:w-[80%] lg:w-[40%]"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    >Download CV</a>
             </div>
 
             <img src={Dev} className="w-[80%] md:w-[50%] md:h-[50%]"/>
