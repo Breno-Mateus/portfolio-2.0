@@ -1,9 +1,13 @@
 import { StackIcons } from "github-automated-repos";
 import { cardProjectsProps } from "./type";
 
-const CardProject = ({data} : cardProjectsProps) => {
+const CardProject = ({data, ...props} : cardProjectsProps) => {
     return (
-        <div key={data.id} className="w-[18rem] md:w-[21rem] min-h-[17rem] md:min-h-[20rem] bg-colorPrimary rounded-md shadow-custom text-colorWhite flex flex-col">
+        <div key={data.id} 
+            className="w-[18rem] min-h-[17rem] bg-colorPrimary rounded-md shadow-custom text-colorWhite flex flex-col
+                    md:min-h-[20rem] md:w-[21rem]"
+            {...props}
+        >
             <div>
                 <img src={data.banner} className="rounded-t-md"/>
             </div>

@@ -1,3 +1,5 @@
+import { ComponentProps } from "react";
+
 interface repository {
     id: number;
     name: string;
@@ -8,6 +10,6 @@ interface repository {
     topics: string[];
 };
 
-export interface cardProjectsProps {
+export interface cardProjectsProps extends ComponentProps<"div"> {
     data: repository;
 }
