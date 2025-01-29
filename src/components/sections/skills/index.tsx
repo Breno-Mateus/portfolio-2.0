@@ -1,6 +1,5 @@
 import BoxSkills from "../../box-skills";
 import BoxSoftSkills from "../../box-soft-skills";
-//images skills
 import Html from "../../../assets/Skills_Image/html-5.png";
 import Css from "../../../assets/Skills_Image/css-3.png";
 import JavaScript from "../../../assets/Skills_Image/js.png";
@@ -16,7 +15,6 @@ import figma from "../../../assets/Skills_Image/figma.png";
 import test from "../../../assets/Skills_Image/Testing-Library.svg";
 import jest from "../../../assets/Skills_Image/jest.svg";
 import post from "../../../assets/Skills_Image/postman.png";
-
 import { RiTeamFill, RiSpeakFill } from "react-icons/ri";
 import { GrUserWorker } from "react-icons/gr";
 
