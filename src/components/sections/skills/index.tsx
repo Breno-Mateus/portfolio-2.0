@@ -17,38 +17,66 @@ import jest from "../../../assets/Skills_Image/jest.svg";
 import post from "../../../assets/Skills_Image/postman.png";
 import { RiTeamFill, RiSpeakFill } from "react-icons/ri";
 import { GrUserWorker } from "react-icons/gr";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import { Autoplay } from "swiper/modules";
 
 const Skills = () => {
-    return (
-        <section id="skills" className="bg-colorPrimary flex flex-col items-center py-16 px-[10%] gap-20">
-            <h1 className="text-center text-3xl md:text-4xl font-bold uppercase">Minhas <span className="text-colorStyle">Habilidades</span></h1>
-            
-            <div className="flex flex-col lg:flex-row gap-8">
-                <BoxSoftSkills Icon={RiTeamFill} title="Trabalho em Equipe" description="Experiência em colaborar com equipes multidisciplinares em projetos de software."/>
-                <BoxSoftSkills Icon={RiSpeakFill} title="Comunicação" description="Capacidade de transmitir ideias de forma clara, seja em equipe ou com clientes."/>
-                <BoxSoftSkills Icon={GrUserWorker} title="Resolução de Problemas" description="Capacidade de identificar e solucionar desafios técnicos e lógicos rapidamente."/>
-            </div>
+  return (
+    <section
+      id="skills"
+      className="bg-colorPrimary flex flex-col items-center py-16 px-[10%] gap-20"
+    >
+      <h1 className="text-center text-3xl md:text-4xl font-bold uppercase">
+        Minhas <span className="text-colorStyle">Habilidades</span>
+      </h1>
 
-            <div className="flex flex-wrap items-center justify-center gap-12">
-                <BoxSkills urlImage={React} name="React"/>
-                <BoxSkills urlImage={Html} name="HTML"/>
-                <BoxSkills urlImage={Css} name="CSS"/>
-                <BoxSkills urlImage={JavaScript} name="JavaScript"/>
-                <BoxSkills urlImage={tailwind} name="Tailwind"/>
-                <BoxSkills urlImage={post} name="Postman"/>
-                <BoxSkills urlImage={jest} name="Jest"/>
-                <BoxSkills urlImage={test} name="Testing Library"/>
-                <BoxSkills urlImage={figma} name="Figma"/>
-                <BoxSkills urlImage={vercel} name="Vercel"/>
-                <BoxSkills urlImage={linux} name="Linux"/>
-                <BoxSkills urlImage={Node} name="Node.Js"/>
-                <BoxSkills urlImage={Style} name="Styled-Components"/>
-                <BoxSkills urlImage={Typescript} name="TypeScript"/>
-                <BoxSkills urlImage={Git} name="Git"/>
-            </div>
-        </section>
-    )
+      <div className="flex flex-col lg:flex-row gap-8">
+        <BoxSoftSkills
+          Icon={RiTeamFill}
+          title="Trabalho em Equipe"
+          description="Experiência em colaborar com equipes multidisciplinares em projetos de software."
+        />
+        <BoxSoftSkills
+          Icon={RiSpeakFill}
+          title="Comunicação"
+          description="Capacidade de transmitir ideias de forma clara, seja em equipe ou com clientes."
+        />
+        <BoxSoftSkills
+          Icon={GrUserWorker}
+          title="Resolução de Problemas"
+          description="Capacidade de identificar e solucionar desafios técnicos e lógicos rapidamente."
+        />
+      </div>
+
+      <Swiper
+        spaceBetween={5}
+        slidesPerView={6}
+        centeredSlides={true}
+        loop={true}
+        speed={1000}
+        autoplay={{ delay: 0, disableOnInteraction: false }} // Faz o carrossel rodar sozinho
+        modules={[Autoplay]}
+        className="w-full m-8 relative -z-10"
+      >
+        <SwiperSlide><BoxSkills urlImage={React} name="React" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={Html} name="HTML" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={Css} name="CSS" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={JavaScript} name="JavaScript" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={tailwind} name="Tailwind" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={post} name="Postman" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={jest} name="Jest" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={test} name="Testing Library" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={figma} name="Figma" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={vercel} name="Vercel" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={linux} name="Linux" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={Node} name="Node.Js" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={Style} name="Styled-Components" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={Typescript} name="TypeScript" /></SwiperSlide>
+        <SwiperSlide><BoxSkills urlImage={Git} name="Git" /></SwiperSlide>
+      </Swiper>
+    </section>
+  );
 };
 
 export default Skills;

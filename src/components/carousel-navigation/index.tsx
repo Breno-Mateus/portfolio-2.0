@@ -6,7 +6,7 @@ const CarouselNavigation = () => {
   const swiper = useSwiper();
 
   return (
-    <div className="mt-4 text-4xl flex items-center justify-center gap-4">
+    <div className="md:mt-4 text-4xl flex items-center justify-center gap-4">
       <button
         className="hover:scale-125 transition-all duration-300 ease-in-out"
         onClick={() => swiper.slidePrev()}

@@ -24,7 +24,7 @@ const Projects = () => {
           slidesPerView={1}
           centeredSlides={true}
           spaceBetween={100}
-          className="w-[21rem] flex flex-col"
+          className="w-full flex flex-col"
         >
           {data.map((item) => (
             <SwiperSlide key={item.id}>

@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 const Header = () => {
     return (
-        <header className="bg-colorPrimary hidden md:flex items-center justify-between fixed top-0 w-screen px-[5%] py-4">
+        <header className="bg-colorPrimary hidden md:flex items-center justify-between fixed top-0 w-screen px-[5%] py-4 z-10">
             <img src={Breno} className="w-8 h-8 rounded-full border-[1px] border-colorStyle"/>
             
             <ul className="flex items-center gap-8 uppercase text-sm">
