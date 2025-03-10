@@ -18,13 +18,13 @@ const Projects = () => {
         Meus <span className="text-colorStyle">Projetos</span>
       </h1>
 
-      <div className="w-full flex justify-center items-center gap-4">
+      <div className="w-full flex justify-center items-center gap-4 px-[10%] md:px-0">
         <Swiper 
           loop={true} 
           slidesPerView={1}
           centeredSlides={true}
           spaceBetween={100}
-          className="w-full flex flex-col"
+          className="w-full flex flex-col relative -z-10"
         >
           {data.map((item) => (
             <SwiperSlide key={item.id}>
