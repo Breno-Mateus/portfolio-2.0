@@ -50,13 +50,13 @@ const Skills = () => {
       </div>
 
       <Swiper
+        modules={[Autoplay]}
         spaceBetween={5}
         slidesPerView={6}
-        centeredSlides={true}
         loop={true}
-        speed={1000}
         autoplay={{ delay: 0, disableOnInteraction: false }} // Faz o carrossel rodar sozinho
-        modules={[Autoplay]}
+        speed={2000}
+        freeMode={true}
         className="w-full m-8 relative -z-10"
       >
         <SwiperSlide><BoxSkills urlImage={React} name="React" /></SwiperSlide>
