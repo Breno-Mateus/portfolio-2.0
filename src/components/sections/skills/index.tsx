@@ -51,13 +51,19 @@ const Skills = () => {
 
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={5}
-        slidesPerView={6}
+        slidesPerView={2}
+        centeredSlides={true}
         loop={true}
         autoplay={{ delay: 0, disableOnInteraction: false }} // Faz o carrossel rodar sozinho
         speed={2000}
         freeMode={true}
-        className="w-full m-8 relative -z-10"
+        breakpoints={{
+          768: {
+            slidesPerView: 6,
+            spaceBetween: 5,
+          }
+        }}
+        className="w-full m-8 relative -z-10 opacity-50"
       >
         <SwiperSlide><BoxSkills urlImage={React} name="React" /></SwiperSlide>
         <SwiperSlide><BoxSkills urlImage={Html} name="HTML" /></SwiperSlide>
