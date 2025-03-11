@@ -1,24 +1,29 @@
-import { useSwiper } from "swiper/react";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from 'swiper/modules';
+import "swiper/swiper-bundle.css";
+import { useGitHubAutomatedRepos } from "github-automated-repos";
+import CardProject from "../card-project";
 
 const CarouselNavigation = () => {
-  const swiper = useSwiper();
+
+  const data = useGitHubAutomatedRepos("Breno-Mateus", "keyword");
 
   return (
-    <div className="text-4xl flex items-center justify-center gap-4 mt-4 md:mt-12">
-      <button
-        className="hover:scale-125 transition-all duration-300 ease-in-out"
-        onClick={() => swiper.slidePrev()}
-      >
-        <IoIosArrowBack />
-      </button>
-      <button
-        className="hover:scale-125 transition-all duration-300 ease-in-out"
-        onClick={() => swiper.slideNext()}
-      >
-        <IoIosArrowForward />
-      </button>
-    </div>
+    <Swiper
+      modules={[Navigation]}
+      navigation
+      loop={true}
+      initialSlide={0}
+      centeredSlides={true}
+      slidesPerView={1}
+      className="w-full flex flex-col relative"
+    >
+      {data.map((item) => (
+        <SwiperSlide key={item.id}>
+          <CardProject data={item} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
