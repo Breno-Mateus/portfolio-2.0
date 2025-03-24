@@ -2,7 +2,6 @@ import CardProject from "../../card-project";
 import { useGitHubAutomatedRepos } from "github-automated-repos";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import "swiper/swiper-bundle.css";
 
 const Projects = () => {
@@ -17,22 +16,18 @@ const Projects = () => {
         Meus <span className="text-colorStyle">Projetos</span>
       </h1>
 
-      <div className="w-full flex flex-col items-center gap-4 px-[10%] md:px-0">
-        {<Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          navigation
-          loop={true}
-          initialSlide={0}
-          centeredSlides={true}
+      <div className="w-full px-4 md:px-0 max-w-3xl">
+        <Swiper
           slidesPerView={1}
-          className="w-full flex flex-col relative"
+          loop
+          className="w-full"
         >
-          {data.map((item) => (
-            <SwiperSlide key={item.id}>
-              <CardProject data={item} />
+          {data.map((card) => (
+            <SwiperSlide key={card.id}>
+              <CardProject data={card}/>
             </SwiperSlide>
           ))}
-        </Swiper>}
+        </Swiper>
       </div>
     </section>
   );
