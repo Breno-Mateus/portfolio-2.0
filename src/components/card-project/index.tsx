@@ -2,18 +2,10 @@ import { StackIcons } from "github-automated-repos";
 import { cardProjectsProps } from "./type";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useSwiper } from "swiper/react";
-import { useEffect, useState } from "react";
 
 const CardProject = ({ data, ...props }: cardProjectsProps) => {
 
   const swiper = useSwiper();
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    if (swiper) {
-      setIsReady(true); // Marca que o swiper está pronto
-    }
-  }, [swiper]);
   
   return (
     <>
@@ -54,7 +46,6 @@ const CardProject = ({ data, ...props }: cardProjectsProps) => {
       </div>
     </div>
 
-    {isReady && (
       <div className="text-4xl flex items-center justify-center gap-4 mt-4 md:mt-12">
         <button
           className="hover:scale-125 transition-all duration-300 ease-in-out"
@@ -69,7 +60,6 @@ const CardProject = ({ data, ...props }: cardProjectsProps) => {
           <IoIosArrowForward />
         </button>
       </div>
-    )}
     </>
   );
 };

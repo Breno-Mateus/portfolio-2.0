@@ -1,25 +1,11 @@
 import BoxSkills from "../../box-skills";
 import BoxSoftSkills from "../../box-soft-skills";
-import Html from "../../../assets/Skills_Image/html-5.png";
-import Css from "../../../assets/Skills_Image/css-3.png";
-import JavaScript from "../../../assets/Skills_Image/js.png";
-import React from "../../../assets/Skills_Image/react.png";
-import Git from "../../../assets/Skills_Image/git.png";
-import Typescript from "../../../assets/Skills_Image/Typescript.png";
-import Style from "../../../assets/Skills_Image/stylecomponents.svg";
-import Node from "../../../assets/Skills_Image/nodejs.png";
-import linux from "../../../assets/Skills_Image/linux.png";
-import tailwind from "../../../assets/Skills_Image/Tailwind CSS.png";
-import vercel from "../../../assets/Skills_Image/Vercel.png";
-import figma from "../../../assets/Skills_Image/figma.png";
-import test from "../../../assets/Skills_Image/Testing-Library.svg";
-import jest from "../../../assets/Skills_Image/jest.svg";
-import post from "../../../assets/Skills_Image/postman.png";
 import { RiTeamFill, RiSpeakFill } from "react-icons/ri";
 import { GrUserWorker } from "react-icons/gr";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Autoplay } from "swiper/modules";
+import { skills } from "../../../data/skills";
 
 const Skills = () => {
   return (
@@ -54,32 +40,26 @@ const Skills = () => {
         slidesPerView={2}
         centeredSlides={true}
         loop={true}
-        autoplay={{ delay: 0, disableOnInteraction: false }} // Faz o carrossel rodar sozinho
+        autoplay={{ delay: 0, disableOnInteraction: false }}
         speed={2000}
         freeMode={true}
         breakpoints={{
           768: {
+            slidesPerView: 4,
+            spaceBetween: 5,
+          },
+          1024: {
             slidesPerView: 6,
             spaceBetween: 5,
           }
         }}
         className="w-full m-8 relative -z-10 opacity-50"
       >
-        <SwiperSlide><BoxSkills urlImage={React} name="React" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={Html} name="HTML" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={Css} name="CSS" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={JavaScript} name="JavaScript" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={tailwind} name="Tailwind" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={post} name="Postman" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={jest} name="Jest" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={test} name="Testing Library" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={figma} name="Figma" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={vercel} name="Vercel" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={linux} name="Linux" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={Node} name="Node.Js" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={Style} name="Styled-Components" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={Typescript} name="TypeScript" /></SwiperSlide>
-        <SwiperSlide><BoxSkills urlImage={Git} name="Git" /></SwiperSlide>
+        {skills.map((skill, index) => (
+          <SwiperSlide key={index}>
+            <BoxSkills urlImage={skill.urlImage} name={skill.name}/>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );
