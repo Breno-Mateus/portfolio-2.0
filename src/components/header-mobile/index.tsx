@@ -2,14 +2,10 @@ import { Pivot as Hamburger } from "hamburger-react";
 import Breno from "../../assets/foto_breno.jpeg";
 import { useEffect, useState } from "react";
 import { FaLinkedin, FaGithubSquare, FaInstagram } from "react-icons/fa";
-import { Link } from "react-scroll";
+import NavLink from "../nav-link";
 
 const HeaderMobile = () => {
   const [isOpen, setOpen] = useState(false);
-
-  const handleOpen = () => {
-    setOpen(false);
-  };
 
   useEffect(() => {
     if (isOpen) {
@@ -28,6 +24,7 @@ const HeaderMobile = () => {
           <img
             src={Breno}
             className="w-8 rounded-full border-[1px] border-colorStyle"
+            alt="Foto de perfil de Breno Mateus"
           />
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
@@ -42,62 +39,43 @@ const HeaderMobile = () => {
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
 
-        <ul className="flex flex-col items-center gap-8 uppercase text-sm">
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500"
-            onClick={() => handleOpen()}
-          >
-            Home
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500"
-            onClick={() => handleOpen()}
-          >
-            Sobre
-          </Link>
-          <Link
-            to="skills"
-            smooth={true}
-            duration={500}
-            className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500"
-            onClick={() => handleOpen()}
-          >
-            Habilidades
-          </Link>
-          <Link
-            to="projects"
-            smooth={true}
-            duration={500}
-            className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500"
-            onClick={() => handleOpen()}
-          >
-            Projetos
-          </Link>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            className="hover:text-colorStyle hover:cursor-pointer hover:underline transition duration-500"
-            onClick={() => handleOpen()}
-          >
-            Contato
-          </Link>
-        </ul>
+        <nav>
+          <ul className="flex flex-col items-center gap-8 uppercase text-sm">
+            <NavLink to="home" onClick={() => setOpen(false)}>
+              Home
+            </NavLink>
+            <NavLink to="about" onClick={() => setOpen(false)}>
+              Sobre
+            </NavLink>
+            <NavLink to="skills" onClick={() => setOpen(false)}>
+              Habilidades
+            </NavLink>
+            <NavLink to="projects" onClick={() => setOpen(false)}>
+              Projetos
+            </NavLink>
+            <NavLink to="contact" onClick={() => setOpen(false)}>
+              Contato
+            </NavLink>
+          </ul>
+        </nav>
 
         <div className="flex gap-4 items-center justify-center text-[1.5rem]">
-          <a href="https://www.linkedin.com/in/breno-mateus/">
+          <a
+            href="https://www.linkedin.com/in/breno-mateus/"
+            aria-label="Visitar meu LinkedIn"
+          >
             <FaLinkedin className="hover:text-colorStyle transition duration-500" />
           </a>
-          <a href="https://github.com/Breno-Mateus">
+          <a
+            href="https://github.com/Breno-Mateus"
+            aria-label="Visitar meu GitHub"
+          >
             <FaGithubSquare className="hover:text-colorStyle transition duration-500" />
           </a>
-          <a href="https://www.instagram.com/brenomateusds/">
+          <a
+            href="https://www.instagram.com/brenomateusds/"
+            aria-label="Visitar meu Instagram"
+          >
             <FaInstagram className="hover:text-colorStyle transition duration-500" />
           </a>
         </div>
