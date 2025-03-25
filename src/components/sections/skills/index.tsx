@@ -13,9 +13,9 @@ const Skills = () => {
       id="skills"
       className="bg-colorPrimary flex flex-col items-center py-16 px-[10%] gap-20"
     >
-      <h1 className="text-center text-3xl md:text-4xl font-bold uppercase">
+      <h2 className="text-center text-3xl md:text-4xl font-bold uppercase">
         Minhas <span className="text-colorStyle">Habilidades</span>
-      </h1>
+      </h2>
 
       <div className="flex flex-col lg:flex-row gap-8">
         <BoxSoftSkills
@@ -51,13 +51,13 @@ const Skills = () => {
           1024: {
             slidesPerView: 6,
             spaceBetween: 5,
-          }
+          },
         }}
         className="w-full m-8 relative -z-10 opacity-50"
       >
         {skills.map((skill, index) => (
           <SwiperSlide key={index}>
-            <BoxSkills urlImage={skill.urlImage} name={skill.name}/>
+            <BoxSkills urlImage={skill.urlImage} name={skill.name} />
           </SwiperSlide>
         ))}
       </Swiper>

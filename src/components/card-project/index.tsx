@@ -14,7 +14,7 @@ const CardProject = ({ data, ...props }: cardProjectsProps) => {
       {...props}
     >
       <div className="md:w-1/2">
-        <img src={data.banner} className="rounded-t-md md:rounded-md w-full h-full" />
+        <img src={data.banner} className="rounded-t-md md:rounded-md w-full h-full" alt={`Banner do projeto ${data.name}`}/>
       </div>
       
       <div className="flex flex-col gap-4 p-4 md:w-1/2">
@@ -25,12 +25,14 @@ const CardProject = ({ data, ...props }: cardProjectsProps) => {
           <a
             href={data.homepage}
             className="bg-colorstyleSecondary rounded-md p-1 hover:cursor-pointer hover:opacity-[0.85]"
+            aria-label={`Ir para o deploy do projeto ${data.name}`}
           >
             Deploy
           </a>
           <a
             href={data.html_url}
             className="bg-colorstyleSecondary rounded-md p-1 hover:cursor-pointer hover:opacity-[0.75]"
+            aria-label={`Ir para o repositório no Github do projeto ${data.name}`}
           >
             Github
           </a>
@@ -39,7 +41,7 @@ const CardProject = ({ data, ...props }: cardProjectsProps) => {
         <div className="flex gap-2 px-2 py-4 items-center justify-center">
           {data.topics.map((icon, index) => {
             return (
-              <StackIcons key={index} itemTopics={icon} className="stack_Icon" />
+              <StackIcons key={index} itemTopics={icon} className="stack_Icon" aria-label={`Tecnologia: ${icon}`}/>
             );
           })}
         </div>
@@ -50,12 +52,14 @@ const CardProject = ({ data, ...props }: cardProjectsProps) => {
         <button
           className="hover:scale-125 transition-all duration-300 ease-in-out"
           onClick={() => swiper.slidePrev()} 
+          aria-label="Navegar para o projeto anterior"
         >
           <IoIosArrowBack />
         </button>
         <button
           className="hover:scale-125 transition-all duration-300 ease-in-out"
           onClick={() => swiper.slideNext()}
+          aria-label="Navegar para o próximo projeto"
         >
           <IoIosArrowForward />
         </button>
