@@ -16,7 +16,7 @@ const Home = () => {
           às necessidades dos usuários!
         </p>
         <a
-          href="/Currículo.pdf"
+          href="/Curriculo.pdf"
           className="bg-colorStyle text-xs text-center md:text-base py-1 px-2 rounded-md hover:opacity-85 font-medium w-[40%] md:w-[80%] lg:w-[40%]"
           target="_blank"
           rel="noopener noreferrer"
