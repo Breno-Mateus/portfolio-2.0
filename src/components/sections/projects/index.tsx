@@ -1,8 +1,8 @@
 import CardProject from "../../card-project";
 import { useGitHubAutomatedRepos } from "github-automated-repos";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import ButtonNavigation from "../../button-navigation";
 
 const Projects = () => {
   const data = useGitHubAutomatedRepos("Breno-Mateus", "keyword");
@@ -32,6 +32,7 @@ const Projects = () => {
               <CardProject data={card}/>
             </SwiperSlide>
           ))}
+          <ButtonNavigation />
         </Swiper>
       </div>
     </section>

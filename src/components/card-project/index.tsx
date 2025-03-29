@@ -1,25 +1,19 @@
 import { StackIcons } from "github-automated-repos";
 import { cardProjectsProps } from "./type";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { useSwiper } from "swiper/react";
 
-const CardProject = ({ data, ...props }: cardProjectsProps) => {
-
-  const swiper = useSwiper();
-  
+const CardProject = ({ data, ...props }: cardProjectsProps) => {  
   return (
-    <>
     <div
-      className="bg-colorPrimary rounded-md text-colorWhite flex flex-col md:flex-row gap-4"
+      className="bg-colorPrimary rounded-md text-colorWhite flex flex-col md:flex-row gap-4 max-h-[36rem] md:max-h-56"
       {...props}
     >
       <div className="md:w-1/2">
         <img src={data.banner} className="rounded-t-md md:rounded-md w-full h-full" alt={`Banner do projeto ${data.name}`}/>
       </div>
       
-      <div className="flex flex-col gap-4 p-4 md:w-1/2">
+      <div className="flex flex-col justify-between gap-4 p-4 md:w-1/2">
         <p className="text-base font-bold">{data.name}</p>
-        <p className="text-xs">{data.description}</p>
+        <p className="text-xs overflow-hidden text-ellipsis line-clamp-2 break-words">{data.description}</p>
 
         <div className="flex gap-4 text-colorWhite text-xs ">
           <a
@@ -47,24 +41,6 @@ const CardProject = ({ data, ...props }: cardProjectsProps) => {
         </div>
       </div>
     </div>
-
-      <div className="text-4xl flex items-center justify-center gap-4 mt-4 md:mt-12">
-        <button
-          className="hover:scale-125 transition-all duration-300 ease-in-out"
-          onClick={() => swiper.slidePrev()} 
-          aria-label="Navegar para o projeto anterior"
-        >
-          <IoIosArrowBack />
-        </button>
-        <button
-          className="hover:scale-125 transition-all duration-300 ease-in-out"
-          onClick={() => swiper.slideNext()}
-          aria-label="Navegar para o próximo projeto"
-        >
-          <IoIosArrowForward />
-        </button>
-      </div>
-    </>
   );
 };
 
