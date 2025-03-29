@@ -16,12 +16,15 @@ const About = () => {
           className="w-[50%] md:w-[15%] rounded-full border-[1px] border-colorStyle"
         />
         <p className="text-justify md:w-[70%] font-light">
-          Sou um profissional dedicado, com experiência em desenvolvimento web e
-          conhecimento em tecnologias como React.js, JavaScript, TypeScript e
-          Node.js. Já atuei em funções técnicas que me permitiram desenvolver
-          habilidades em supervisão, comunicação e resolução de problemas. Estou
-          sempre buscando aprender e aprimorar minhas competências para
-          contribuir de forma eficaz em novos desafios e projetos.
+          Desenvolvedor front-end com atuação em React.js e Next.js, criando
+          interfaces responsivas e acessíveis. Experiência na criação e
+          integração de dados para plataformas de e-commerce e do
+          desenvolvimento de soluções voltadas para comunidades de
+          desenvolvedores. Busco minha primeira oportunidade profissional como
+          desenvolvedor front-end júnior para aplicar meus conhecimentos,
+          contribuindo com soluções eficientes e aprimorando minhas habilidades
+          de comunicação, trabalho em equipe e aprendizado contínuo em um
+          ambiente desafiador.
         </p>
       </div>
     </section>
